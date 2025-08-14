@@ -1,0 +1,11 @@
+.card {
+  width: toRem(300);
+  height: toRem(200);
+  border: 1px solid #ccc;
+
+  .card-body {
+    height: 100%;
+
+    @include flex-center;
+  }
+}

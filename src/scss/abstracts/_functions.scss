@@ -1,0 +1,5 @@
+@function toRem($pixels) {
+  // Convierte un valor en píxeles a rems.
+  // La base es 16px, que es el tamaño de fuente por defecto de la mayoría de los navegadores.
+  @return ($pixels / $base-font-size) * 1rem;
+}
