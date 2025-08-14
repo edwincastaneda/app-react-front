@@ -3,17 +3,20 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-const MainLayoutWithSidebar: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    // @ts-ignore
+interface MainLayoutWithSidebarProps {
+    children: React.ReactNode;
+    onLogout: () => void;
+}
+
+const MainLayoutWithSidebar: React.FC<MainLayoutWithSidebarProps> = ({ children, onLogout }) => {
+
     return (
         <div className="d-flex min-vh-100">
-            {/* Sidebar - se oculta en pantallas pequeñas con d-none y se muestra en lg con d-lg-flex */}
-            <div className="d-none d-lg-flex flex-column flex-shrink-0 bg-dark text-white" style={{ width: '250px' }}>
+            <div className="d-none d-lg-flex flex-column flex-shrink-0 bg-primary text-white" style={{ width: 'var(--sidebar-width)' }}>
                 <Sidebar />
             </div>
-            {/* Contenido principal */}
             <div className="d-flex flex-column w-100">
-                <Header />
+                <Header onLogout={onLogout} isLoggedIn={true}/>
                 <main className="container-fluid my-4 flex-grow-1">
                     {children}
                 </main>
