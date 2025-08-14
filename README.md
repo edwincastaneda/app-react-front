@@ -1,3 +1,38 @@
+# Documentación de la Arquitectura del Proyecto
+
+La estructura de carpetas que hemos implementado sigue el principio de separación de responsabilidades, lo que significa que cada carpeta tiene un propósito claro y contiene componentes o archivos relacionados. Esto mejora la organización, la mantenibilidad y la escalabilidad de la aplicación.
+
+# APP
+
+```
+src/app/
+├── components/            // Todos los componentes funcionales y reutilizables.
+│   ├── Button.tsx
+│   ├── Input.tsx     
+│   ├── Card.tsx 
+│   └── Card.tsx    
+├── layouts/                // Componentes que definen la estructura y el esqueleto de la página
+│   ├── MainLayoutWithSidebar.tsx  
+│   ├── Header.tsx  
+│   ├── Footer.tsx  
+│   └── Sidebar.tsx  
+└── pages                   // Componentes que representan una página completa de la aplicación
+    ├── LoginPage.tsx
+    ├── LoginPage.tsx
+    └── ProfilePage.tsx
+
+```
+
+## Explicación de las carpetas:
+
+**components/:** Todos los componentes funcionales y reutilizables.
+
+**layouts/:** Componentes que definen la estructura y el esqueleto de la página
+
+**pages/:** Componentes que representan una página completa de la aplicación
+
+
+
 # SCSS
 
 Sistema de diseño
@@ -32,6 +67,11 @@ src/scss/
 **layout/:** Define la estructura principal de tu sitio, como el encabezado, el pie de página o la barra lateral.
 
 **main.scss:** Este es el archivo principal que importas en tu index.js. Su única función es importar todos los demás archivos en el orden correcto.
+
+
+## TEST
+
+Esta carpeta está dedicada exclusivamente a los tests unitarios.
 
 
 ## Available Scripts
